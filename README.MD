@@ -9,3 +9,5 @@ The OpenCV(https://github.com/opencv/opencv-python) library was used as the basi
 As for the recognition of the text on the license plates, it was decided to use the EasyOCR library (https://github.com/JaidedAI/EasyOCR), due to its ability of data processing on the graphics core or CPU by choice. This step may decrease system performance, but at the same time reduce hardware requirements and energy consumption.
 
 For the role of database was chosen SQLite. A simple, small, fast, full-featured SQL database engine.
+
+Unit and Integrational tests was built using python unittest tool
