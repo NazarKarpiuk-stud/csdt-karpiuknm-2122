@@ -1,5 +1,7 @@
 import cv2
 import easyocr
+from db_appliance import createTable, insertResult
+from get_timestamp import getCurrentTime, getCurrentDate
 
 # Resource path
 
@@ -40,3 +42,8 @@ res = cv2.putText(img, text, (x, y - 5), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)
 cv2.imshow("RES", res)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+# Add the result to the database
+
+createTable(getCurrentDate())
+insertResult(getCurrentDate(), getCurrentTime(), img_path, text)
