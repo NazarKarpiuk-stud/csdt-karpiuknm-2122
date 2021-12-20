@@ -1,0 +1,18 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+-   repo: https://github.com/psf/black
+    rev: 19.3b0
+    hooks:
+    -   id: black
+-   repo: local
+    hooks:
+      - id: unittest-check
+        name: unittest-check
+        entry: python3 -m unittest
+        language: system
+        pass_filenames: false
+        always_run: true
