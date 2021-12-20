@@ -1,26 +1,9 @@
-Student - Karpiuk Nazar 
-Group - KI-48 
+Student - Karpiuk Nazar
+Group - KI-48
 Subject - CSTD
 
-Student number - 6 
-HW i-face - I2C 
-Game - tic-tac-toe 
-Data driven format - binary
+In this educational project was implemented a recognition system of European-style car license plates.
 
-Play modes:
-∙ Man vs AI
-∙ Man vs Man
-∙ AI vs AI
-AI should support next complexity levels:
-∙ Random move;
-∙ Win strategy;
-Actions:
-∙ New;
-∙ Save;
-∙ Load;
-The proposal for data driven approach: configuration (saved in configuration file or DB):
-∙ board size;
-∙ distance;
-∙ tool size;
-∙ win statement;∙ lose statement;
-∙ AI parameters
+The OpenCV(https://github.com/opencv/opencv-python) library was used as the basis for the recognition of vehicle registration numbers (confirmation of their presence in the picture, finding their exact location) and pre-processing of images (resizing and reduction to a monochrome black and white pattern) as well. The decision to choose this library was based on software capabilities aimed at fast, non-resource-intensive calculations for graphics data processing.
+
+As for the recognition of the text on the license plates, it was decided to use the EasyOCR library (https://github.com/JaidedAI/EasyOCR), due to its ability of data processing on the graphics core or CPU by choice. This step may decrease system performance, but at the same time reduce hardware requirements and energy consumption.
