@@ -2,9 +2,13 @@ name: pipeline-tasks
 
 on:
   push:
+<<<<<<< HEAD
     branches:
      - "develop"
      - "feature/karpiuknm/develop"
+=======
+    branches: [main]
+>>>>>>> dcd77f42da5c03949838c187ddf8d97b71f3920a
 
 jobs:
   tests-and-artifacts:
