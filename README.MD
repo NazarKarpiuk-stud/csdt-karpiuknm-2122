@@ -11,3 +11,7 @@ As for the recognition of the text on the license plates, it was decided to use 
 For the role of database was chosen SQLite. A simple, small, fast, full-featured SQL database engine.
 
 Unit and Integrational tests was built using python unittest tool
+
+v.1.0.
+  - added tag
+  - held tests
