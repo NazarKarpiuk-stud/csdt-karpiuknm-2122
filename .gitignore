@@ -127,13 +127,6 @@ var/
 
 node_modules/
 
-httpcache/
-!httpcache/.gitkeep
-items/
-!items/.gitkeep
-logs/
-!logs/.gitkeep
-
 .proxies
 
 secret.*

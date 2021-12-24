@@ -1,0 +1,38 @@
+name: pipeline-tasks
+
+on:
+  push:
+    branches:
+     - "develop"
+     - "feature/karpiuknm/develop"
+
+jobs:
+  tests-and-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo content
+        uses: actions/checkout@v2
+
+      - name: unittest run
+        run: |
+          python3 -m unittest
+
+      - name: creating directory
+        run: |
+          mkdir artifacts
+          cd artifacts
+          touch log.txt
+          cd ..
+
+      - name: extracting last log records
+        run: |
+          python3 get_last_logs.py > artifacts/log.txt
+
+      - name: use the upload artifact github action
+        uses: actions/upload-artifact@v2
+        with:
+          name: assets-for-download
+          path: artifacts
+
+      - name: result confirmation
+        run: echo "🍏 This job's status is ${{ job.status }}."
